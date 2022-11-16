@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            background-color: black;
+        }
+        
+        nav li {
+            padding: 0 20px;
+            display: inline-block;
+        }
+        
+        nav li a {
+            color: #808080;
+        }
+        
+        nav li a:hover {
+            color: white;
+        }
+        
+        .logo {
+            font-size: 30px;
+            font-weight: 600;
+            color: aliceblue;
+        }
+        
+        .dr {
+            color: #808080;
+            padding: 6px 18px;
+            border-radius: 8px;
+            border: 1px solid #808080;
+        }
+        
+        .dc {
+            color: #808080;
+            padding: 6px 18px;
+            border-radius: 8px;
+            border: 1px solid #808080;
+        }
+        
+        .dc:hover {
+            border: 1px solid white;
+            color: white;
+        }
+        
+        .dr:hover {
+            border: 1px solid white;
+            color: white;
+        }
+        
+        .big {
+            height: 1080px;
+            background-image: url("images/wallhaven-lq95op_1920x1080.png");
+            position: relative;
+        }
+        
+        .min-images {
+            padding: 100px 100px;
+            list-style-type: none;
+        }
+        
+        .min-images li {
+            padding: 50px 0px;
+            font-size: 20px;
+            font-weight: 400;
+            color: darkgray;
+            display: flex;
+        }
+        
+        .min-images li:hover {
+            color: lightgrey;
+        }
+        
+        .min {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .small {
+            height: 1080px;
+            position: relative;
+            background-image: url("images\\wallhaven-k93wjm_1920x1080.png");
+        }
+        
+        .twosmall {
+            height: 1080px;
+            background-image: url("images\\wallhaven-p8yrdj_1920x1080.png");
+            position: relative;
+        }
+        
+        h1 {
+            text-align: center;
+            color: lightblue;
+            padding: 50px;
+        }
+        
+        .show {
+            width: 900px;
+            height: 750px;
+            border-radius: 5px;
+            position: absolute;
+            top: 150px;
+            right: 260px;
+            overflow: hidden;
+        }
+        
+        .images {
+            display: flex;
+            transition: .2s;
+            width: 500%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+        }
+        
+        .img {
+            width: 100%;
+            background-size: cover;
+            height: 100%;
+        }
+        
+        .img:nth-child(1) {
+            background-image: url("images/wallhaven-eye32l_1920x1080.png");
+        }
+        
+        .img:nth-child(2) {
+            background-image: url("images/wallhaven-8od28o_1920x1080.png");
+        }
+        
+        .img:nth-child(3) {
+            background-image: url("images/wallhaven-k91pyq_1920x1080.png");
+        }
+        
+        .img:nth-child(4) {
+            background-image: url("images/wallhaven-5wj225_1920x1080.png");
+        }
+        
+        .img:nth-child(5) {
+            background-image: url("images/wallhaven-gjkvvl_1920x1080.pngg");
+        }
+        
+        h3 {
+            text-align: center;
+            color: seashell;
+        }
+        
+        .kk {
+            position: absolute;
+            top: 90%;
+            right: 38%;
+            text-align: center;
+        }
+        
+        .first,
+        .third,
+        .second {
+            width: 55%;
+            height: 40%;
+            background-size: cover;
+        }
+        
+        .first {
+            position: absolute;
+            right: 42%;
+            top: 10%;
+            background-image: url("images\\wallhaven-48vylk_1920x1080.png");
+        }
+        
+        .second {
+            position: absolute;
+            right: 3%;
+            top: 40%;
+            background-image: url("images\\wallhaven-1j39o3_1920x1080.png");
+        }
+        
+        .third {
+            top: 70%;
+            position: absolute;
+            right: 42%;
+            background-image: url("images\\wallhaven-4oe3z7_1920x1080.png");
+        }
+        
+        p {
+            font-size: 20px;
+            color: thistle;
+        }
+        
+        .diyi {
+            position: absolute;
+            top: 20%;
+            right: 90px;
+        }
+        
+        .dier {
+            position: absolute;
+            top: 60%;
+            left: 80px;
+        }
+        
+        .disan {
+            position: absolute;
+            top: 85%;
+            right: 80px;
+        }
+        
+        .ll {
+            background-color: peru;
+            opacity: .6;
+            width: 600px;
+            height: 350 px;
+            border-radius: 25px;
+            text-align: center;
+            padding: 5px 40px;
+            box-sizing: border-box;
+            position: absolute;
+            right: 30%;
+        }
+        
+        .last {
+            color: thistle;
+            position: absolute;
+            top: 20%;
+            right: 30%;
+            font-size: 30px;
+        }
+        
+        .lt {
+            position: absolute;
+            top: 60%;
+            right: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big" id="big">
+
+        <header class="ce">
+            <a href="#" class="logo">I see</a>
+            <nav class="dingbu">
+                <ul class="ding">
+                    <li><a href="#big" class="zhuye">主页</a></li>
+                    <li><a href="#small" class="fuwu">服务</a></li>
+                    <li><a href="#twosmall" class="guanyu">关于</a></li>
+                </ul>
+            </nav>
+            <div>
+                <a href="file:///C:/Users/HHM/Desktop/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/Login.html?" class="dr">登入</a>
+                <a href="http://www.baidu.com/" class="dc">注册</a>
+            </div>
+        </header>
+        <div class="cebian">
+
+            <nav>
+                <ul class="min-images">
+                    <li>
+                        <a href="#" class="min">春晓</a></li>
+                    <li>
+                        <a href="#" class="min">夏至</a></li>
+                    <li>
+                        <a href="#" class="min">秋落</a></li>
+                    <li>
+                        <a href="#" class="min">冬聆</a></li>
+                    <li>
+                        <a href="#" class="min">更多</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="show">
+            <ul class="images">
+                <li class="img"></li>
+                <li class="img"></li>
+                <li class="img"></li>
+                <li class="img"></li>
+                <li class="img"></li>
+            </ul>
+        </div>
+
+        <div class="small" id="small">
+            <h1>服务</h1>
+            <p class="diyi">Never give up your dream.
+                </br> And bumpy is the road, bright is the future.
+            </p>
+            <p class="dier">我们期待的着每个志同道合的人加入我们
+            </p>
+            <p class="disan">如果您想加入我们请联系邮箱地址 </br>:1836098724@qq.ocm 发送您的简历至此邮箱，</br>我们在审核之后将会尽快与您联系
+
+            </p>
+            <div class="first"></div>
+            <div class="second"></div>
+            <div class="third"></div>
+        </div>
+        <div class="twosmall" id="twosmall">
+            <h1>关于</h1>
+            <input type="text" class="ll">
+            <p class="last">请输入您宝贵的建议
+                </br>
+                </br>我们致力与发现自然界所有的美丽
+                </br>
+                </br>更致力与将这些分享给人们,让人们了解自然界
+                </br>
+                </br>这将使人们更加去热爱世间的千千万万
+            </p>
+            <h1 class="lt">That is I See.</h1>
+            <div class="kk">
+                <h3>本网站注释权归XXX所有 </h3>
+                <h3>闽ICP证030173号-1 闽网文【2013】0934-983号</h3>
+                <h3>详情请移动至XXXX</h3>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let left = document.querySelector(".button-left")
+    let right = document.querySelector(".button-right")
+    let min = document.querySelectorAll(".min")
+    let images = document.querySelector(".images")
+
+    let index = 0
+    let time
+
+    function position() {
+        images.style.left = (index * -100) + "%"
+    }
+
+    function add() {
+        if (index >= min.length - 1) {
+            index = 0
+        } else {
+            index++
+        }
+    }
+
+    function desc() {
+        if (index < 1) {
+            index = min.length - 1
+        } else {
+            index--
+        }
+    }
+
+    function timer() {
+        time = setInterval(() => {
+            index++
+            desc()
+            add()
+            position()
+        }, 3000)
+    }
+
+    for (let i = 0; i < min.length; i++) {
+        min[i].addEventListener("click", () => {
+            index = i
+            position()
+            clearInterval(time)
+            timer()
+        })
+    }
+
+    timer()
+</script>
+
+</html>
